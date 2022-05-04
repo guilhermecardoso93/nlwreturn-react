@@ -21,7 +21,7 @@ export function FeedbackContentStep({
 
   function handleSubmitFeedback(event: FormEvent) {
     event.preventDefault();
-    console.log({ comment, screenshot });
+    console.log({comment, screenshot});
 
     onFeedbackSent();
   }

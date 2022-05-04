@@ -4,9 +4,7 @@ interface FeedbackSuccessStepProps {
   onFeedbackRestartRequest: () => void;
 }
 
-export function FeedbackSuccessStep({
-  onFeedbackRestartRequest
-}: FeedbackSuccessStepProps) {
+export function FeedbackSuccessStep({onFeedbackRestartRequest}:FeedbackSuccessStepProps) {
   return (
     <>
       <header>
@@ -31,8 +29,6 @@ export function FeedbackSuccessStep({
         </svg>
         <span className="text-xl mt-2">Agradecemos o feedback!</span>
         <button
-          type="button"
-          onClick={onFeedbackRestartRequest}
           className="px-6 py-2 mt-6 bg-zinc-800 rounded-md text-sm border-transparent leading-6
         hover:bg-zinc-700 transition-colors 
         focus:border-brand-500 focus:ring-brand-500 focus:ring-1 focus:outline-none resize-none

@@ -7,11 +7,9 @@ import { ScreenShotButton } from "../ScreenShotButton";
 interface FeedbackContentStepProps {
   feedbackType: FeedbackType;
   onFeedbackRestartRequest: () => void;
-  onFeedbackSent: () => void;
 }
 export function FeedbackContentStep({
   feedbackType,
-  onFeedbackSent,
   onFeedbackRestartRequest
 }: FeedbackContentStepProps) {
   const [screenshot, setScreenshot] = useState<string | null>(null);
@@ -21,9 +19,7 @@ export function FeedbackContentStep({
 
   function handleSubmitFeedback(event: FormEvent) {
     event.preventDefault();
-    console.log({ comment, screenshot });
-
-    onFeedbackSent();
+    console.log(comment, screenshot);
   }
   return (
     <>
@@ -66,7 +62,7 @@ export function FeedbackContentStep({
             border-transparent flex-1 justify-center 
             items-center text-sm hover:bg-brand-300 focus:outline-none focus:ring-2 
             focus:ring-offset-2 focus:ring-offset-zinc-900 focus:ring-brand-500 transition-color
-            disabled:opacity-50 disabled:hover:bg-brand-500"
+            disabled:opacity-50"
           >
             Enviar Feedback
           </button>

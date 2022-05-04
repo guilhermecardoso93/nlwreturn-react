@@ -11,7 +11,6 @@ interface FeedbackContentStepProps {
 }
 export function FeedbackContentStep({
   feedbackType,
-  onFeedbackSent,
   onFeedbackRestartRequest
 }: FeedbackContentStepProps) {
   const [screenshot, setScreenshot] = useState<string | null>(null);
@@ -21,7 +20,7 @@ export function FeedbackContentStep({
 
   function handleSubmitFeedback(event: FormEvent) {
     event.preventDefault();
-    console.log({ comment, screenshot });
+    console.log(comment, screenshot);
 
     onFeedbackSent();
   }
